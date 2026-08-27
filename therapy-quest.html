@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Star Path — Speech & Skills Adventure</title>
+
+<!-- Makes this launch as a full-screen app (no Safari bars) when added to the Home Screen -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Star Path">
+<meta name="theme-color" content="#F7F4EE">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cloud:#F7F4EE;
+    --card:#FFFFFF;
+    --ink:#3A3A3A;
+    --ink-soft:#6B655D;
+    --line:#E8E2D6;
+
+    --speech:#E8846B;     --speech-soft:#FBE3DA;
+    --words:#E3A857;      --words-soft:#FBEBD3;
+    --steps:#5B9BD5;      --steps-soft:#DDEAF6;
+    --motor:#6FA98A;      --motor-soft:#DDEEE4;
+    --calm:#9C87C4;       --calm-soft:#E9E3F5;
+    --social:#D77A9E;     --social-soft:#F8DFE8;
+
+    --radius:28px;
+    --shadow: 0 10px 24px rgba(58,58,58,0.08);
+    --font-display:'Baloo 2', system-ui, sans-serif;
+    --font-body:'Atkinson Hyperlegible', system-ui, sans-serif;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color: transparent; user-select:none;}
+  html,body{height:100%;}
+  body{
+    margin:0; background:var(--cloud); color:var(--ink);
+    font-family:var(--font-body);
+    overscroll-behavior:none;
+    touch-action: manipulation;
+  }
+  h1,h2,h3,.display{font-family:var(--font-display);}
+
+  button{font-family:inherit; cursor:pointer; border:none; background:none;}
+  button:focus-visible, [tabindex]:focus-visible{outline:4px solid #2E7D32; outline-offset:3px;}
+
+  .screen{ min-height:100vh; display:none; flex-direction:column; padding:18px 20px 40px; }
+  .screen.active{ display:flex; animation: fadein .35s ease; }
+  @keyframes fadein{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);} }
+  @media (prefers-reduced-motion: reduce){ .screen.active{animation:none;} }
+
+  /* ---------- Top bar (consistent everywhere except Home) ---------- */
+  .topbar{ display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; }
+  .home-btn{
+    display:flex; align-items:center; gap:8px; background:var(--card); border:2px solid var(--line);
+    padding:10px 18px 10px 14px; border-radius:999px; font-family:var(--font-display); font-weight:700;
+    font-size:1.05rem; color:var(--ink); box-shadow:var(--shadow);
+  }
+  .home-btn:active{ transform:scale(.96); }
+  .star-jar{ display:flex; align-items:center; gap:8px; background:var(--card); border:2px solid var(--line);
+    padding:8px 16px; border-radius:999px; box-shadow:var(--shadow); font-family:var(--font-display); font-weight:700; }
+  .star-jar svg{ width:22px; height:22px; }
+
+  /* ---------- HOME ---------- */
+  #home{ padding:22px 20px 40px; }
+  .home-header{ text-align:center; margin-bottom:6px; }
+  .home-header .mascot{ font-size:3rem; line-height:1; }
+  .home-header h1{ font-size:1.9rem; margin:6px 0 2px; }
+  .home-header p{ color:var(--ink-soft); margin:0; font-size:1.05rem; }
+
+  .jar-wrap{ display:flex; justify-content:center; margin:14px 0 10px; }
+  .jar{ background:var(--card); border-radius:999px; box-shadow:var(--shadow); padding:10px 24px; display:flex; align-items:center; gap:10px; }
+  .jar .stars{ display:flex; gap:4px; }
+  .jar .stars svg{ width:20px; height:20px; }
+
+  .level-wrap{ display:flex; justify-content:center; margin-bottom:20px; }
+  .level-toggle{ font-family:var(--font-display); font-weight:700; font-size:.92rem; padding:9px 18px; border-radius:999px;
+    background:linear-gradient(120deg,#FFE79A,#FFC773); color:#5A4200; box-shadow:var(--shadow); display:flex; align-items:center; gap:6px; }
+  .level-toggle.locked{ background:var(--card); color:var(--ink-soft); border:2px solid var(--line); }
+  .level-toggle .lvl-switch{ font-weight:400; font-size:.8rem; opacity:.85; }
+  .level-toggle:active{ transform:scale(.96); }
+  .level-chip{ display:inline-block; font-family:var(--font-display); font-weight:700; font-size:.78rem; color:var(--accent);
+    background:var(--accent-soft); padding:4px 12px; border-radius:999px; margin-top:6px; }
+
+  .tiles{ display:grid; grid-template-columns:1fr 1fr; gap:16px; max-width:640px; margin:0 auto; width:100%; }
+  .tile{
+    background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:20px 14px;
+    display:flex; flex-direction:column; align-items:center; gap:8px; text-align:center;
+    border:3px solid transparent; min-height:150px; justify-content:center;
+  }
+  .tile:active{ transform:scale(.96); }
+  .tile .icon-wrap{ width:64px; height:64px; border-radius:50%; display:flex; align-items:center; justify-content:center; }
+  .tile .icon-wrap svg{ width:36px; height:36px; }
+  .tile .label{ font-family:var(--font-display); font-weight:700; font-size:1.05rem; }
+  .tile .sub{ font-size:.82rem; color:var(--ink-soft); }
+
+  .tile.speech{ border-color:var(--speech-soft); } .tile.speech .icon-wrap{ background:var(--speech-soft); color:var(--speech); }
+  .tile.words{ border-color:var(--words-soft); } .tile.words .icon-wrap{ background:var(--words-soft); color:var(--words); }
+  .tile.steps{ border-color:var(--steps-soft); } .tile.steps .icon-wrap{ background:var(--steps-soft); color:var(--steps); }
+  .tile.motor{ border-color:var(--motor-soft); } .tile.motor .icon-wrap{ background:var(--motor-soft); color:var(--motor); }
+  .tile.calm{ border-color:var(--calm-soft); } .tile.calm .icon-wrap{ background:var(--calm-soft); color:var(--calm); }
+  .tile.social{ border-color:var(--social-soft); } .tile.social .icon-wrap{ background:var(--social-soft); color:var(--social); }
+
+  .parent-link{ text-align:center; margin-top:26px; }
+  .parent-link button{ color:var(--ink-soft); text-decoration:underline; font-size:.9rem; padding:10px; }
+
+  /* ---------- Generic module chrome ---------- */
+  .module-title{ text-align:center; margin:4px 0 18px; }
+  .module-title h2{ font-size:1.6rem; margin:0 0 4px; }
+  .module-title p{ margin:0; color:var(--ink-soft); }
+  .stage{ flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; gap:18px; max-width:600px; margin:0 auto; width:100%; }
+
+  .big-card{ background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:28px; width:100%;
+    display:flex; flex-direction:column; align-items:center; gap:14px; }
+
+  .emoji-hero{ font-size:5.5rem; line-height:1; }
+  .prompt-word{ font-family:var(--font-display); font-size:2.1rem; font-weight:700; text-align:center; }
+
+  .action-row{ display:flex; gap:12px; flex-wrap:wrap; justify-content:center; width:100%; }
+  .pill-btn{ font-family:var(--font-display); font-weight:700; font-size:1.02rem; padding:14px 22px; border-radius:999px;
+    box-shadow:var(--shadow); display:flex; align-items:center; gap:8px; min-height:52px; }
+  .pill-btn:active{ transform:scale(.95); }
+  .pill-btn.primary{ background:var(--ink); color:white; }
+  .pill-btn.ghost{ background:var(--card); color:var(--ink); border:2px solid var(--line); }
+  .pill-btn.capped, .word-chip.capped{ opacity:.4; pointer-events:none; }
+  .rep-dots{ display:flex; gap:4px; margin-left:2px; }
+  .rep-dots .dot{ width:7px; height:7px; border-radius:50%; background:currentColor; opacity:.25; }
+  .rep-dots .dot.on{ opacity:.9; }
+
+  .praise-toast{ position:fixed; left:50%; bottom:32px; transform:translate(-50%,20px); background:var(--ink); color:white;
+    padding:14px 26px; border-radius:999px; font-family:var(--font-display); font-weight:700; font-size:1.05rem;
+    box-shadow:0 12px 30px rgba(0,0,0,.25); opacity:0; pointer-events:none; transition:all .3s ease; z-index:50; display:flex; gap:8px; align-items:center;}
+  .praise-toast.show{ opacity:1; transform:translate(-50%,0); }
+
+  /* Theming per module (accent var) */
+  .theme-speech{ --accent:var(--speech); --accent-soft:var(--speech-soft); }
+  .theme-words{ --accent:var(--words); --accent-soft:var(--words-soft); }
+  .theme-steps{ --accent:var(--steps); --accent-soft:var(--steps-soft); }
+  .theme-motor{ --accent:var(--motor); --accent-soft:var(--motor-soft); }
+  .theme-calm{ --accent:var(--calm); --accent-soft:var(--calm-soft); }
+  .theme-social{ --accent:var(--social); --accent-soft:var(--social-soft); }
+  .pill-btn.accent{ background:var(--accent); color:white; }
+  .home-btn.accent-border{ border-color:var(--accent); }
+
+  /* ---------- Word Builder ---------- */
+  .word-bank{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+  .word-chip{ background:var(--accent-soft); color:var(--ink); font-family:var(--font-display); font-weight:700;
+    padding:12px 18px; border-radius:16px; font-size:1.05rem; min-height:48px; }
+  .word-chip:active{ transform:scale(.94); }
+  .sentence-strip{ min-height:64px; width:100%; background:var(--cloud); border:2px dashed var(--line); border-radius:16px;
+    display:flex; align-items:center; justify-content:center; padding:10px; font-family:var(--font-display); font-size:1.3rem; font-weight:700; flex-wrap:wrap; gap:6px; text-align:center; }
+
+  /* ---------- Steps / Sequencing ---------- */
+  .seq-picker{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:6px; }
+  .seq-picker .pill-btn.selected{ outline:3px solid var(--accent); }
+  .step-slots{ display:flex; flex-direction:column; gap:10px; width:100%; }
+  .slot{ display:flex; align-items:center; gap:14px; background:var(--cloud); border:2px solid var(--line); border-radius:18px; padding:10px 14px; min-height:64px; }
+  .slot .num{ width:34px; height:34px; border-radius:50%; background:var(--accent); color:white; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:700; flex-shrink:0; }
+  .slot.filled{ background:var(--accent-soft); }
+  .option-row{ display:flex; gap:12px; flex-wrap:wrap; justify-content:center; }
+  .step-option{ background:var(--card); border:2px solid var(--line); border-radius:16px; padding:14px 16px; display:flex; align-items:center; gap:10px; font-family:var(--font-display); font-weight:700; box-shadow:var(--shadow); min-height:56px; }
+  .step-option:active{ transform:scale(.95); }
+  .step-option.used{ opacity:.35; pointer-events:none; }
+  .step-option.selected{ outline:3px solid var(--accent); background:var(--accent-soft); }
+  .slot.awaiting{ border-color:var(--accent); border-style:dashed; }
+  .slot.shake{ animation: slotShake .4s ease; }
+  @keyframes slotShake{
+    0%,100%{ transform:translateX(0); }
+    20%{ transform:translateX(-8px); }
+    40%{ transform:translateX(7px); }
+    60%{ transform:translateX(-5px); }
+    80%{ transform:translateX(4px); }
+  }
+  @media (prefers-reduced-motion: reduce){ .slot.shake{ animation:none; background:var(--accent-soft); } }
+
+  /* ---------- Trace ---------- */
+  .trace-wrap{ background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:18px; width:100%; display:flex; flex-direction:column; align-items:center; gap:12px; }
+  canvas{ touch-action:none; border-radius:18px; background:var(--cloud); }
+  .shape-picker{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center; }
+
+  /* ---------- Calm corner ---------- */
+  .breathe-circle{ width:180px; height:180px; border-radius:50%; background:radial-gradient(circle at 35% 30%, #C6B7E2, var(--calm));
+    display:flex; align-items:center; justify-content:center; color:white; font-family:var(--font-display); font-weight:700; font-size:1.2rem;
+    transition:transform 4s ease-in-out; box-shadow:0 20px 40px rgba(156,135,196,.35); }
+  .breathe-circle.big{ transform:scale(1.35); }
+  .bubble-field{ display:grid; grid-template-columns:repeat(5,1fr); gap:10px; width:100%; }
+  .bubble{ aspect-ratio:1; border-radius:50%; background:linear-gradient(160deg,#EFE8FA,var(--calm-soft)); box-shadow:inset 0 4px 8px rgba(255,255,255,.6), 0 6px 14px rgba(0,0,0,.06); }
+  .bubble.popped{ opacity:0; transform:scale(0); transition:all .25s ease; }
+
+  /* ---------- Quiet Sort ---------- */
+  .sort-bins{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; width:100%; }
+  .sort-bin{ flex:1; min-width:64px; max-width:110px; aspect-ratio:1; border-radius:20px; background:var(--cloud); border:3px dashed var(--line);
+    display:flex; align-items:center; justify-content:center; font-size:1.8rem; position:relative; transition:opacity .2s ease; }
+  .sort-bin.awaiting{ border-style:solid; }
+  .sort-bin.nudge{ animation:binNudge .5s ease; }
+  @keyframes binNudge{ 0%,100%{ opacity:1; } 50%{ opacity:.5; } }
+  @media (prefers-reduced-motion: reduce){ .sort-bin.nudge{ animation:none; } }
+  .bin-count{ position:absolute; bottom:4px; right:8px; font-family:var(--font-display); font-weight:700; font-size:.72rem; color:var(--ink-soft); background:rgba(255,255,255,.7); border-radius:8px; padding:0 5px; }
+  .sort-items{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center; width:100%; min-height:60px; align-items:center; }
+  .sort-item{ width:52px; height:52px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.5rem;
+    background:var(--card); box-shadow:var(--shadow); border:3px solid var(--line); transition:transform .2s ease; flex-shrink:0; }
+  .sort-item.selected{ outline:3px solid var(--accent); transform:scale(1.1); }
+  .sort-complete-msg{ font-family:var(--font-display); font-weight:700; color:var(--ink-soft); padding:10px; text-align:center; width:100%; }
+
+  /* ---------- Social / turn taking ---------- */
+  .turn-banner{ width:100%; text-align:center; padding:14px; border-radius:18px; font-family:var(--font-display); font-weight:800; font-size:1.15rem; color:white; }
+  .turn-banner.p1{ background:var(--social); }
+  .turn-banner.p2{ background:#8FA6C9; }
+  .emo-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; width:100%; }
+  .emo-card{ aspect-ratio:1; background:var(--card); border-radius:16px; box-shadow:var(--shadow); display:flex; align-items:center; justify-content:center; font-size:2rem; border:3px solid var(--line); }
+  .emo-card.flipped{ background:var(--social-soft); }
+  .emo-card.matched{ opacity:.3; }
+
+  footer.tip{ max-width:600px; margin:22px auto 0; text-align:center; color:var(--ink-soft); font-size:.85rem; }
+
+  @media (max-width:380px){
+    .tiles{ gap:12px; }
+    .home-header h1{ font-size:1.6rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============= HOME ============= -->
+<section id="home" class="screen active">
+  <div class="home-header">
+    <div class="mascot">🦊</div>
+    <h1>Star Path</h1>
+    <p>Pick an adventure!</p>
+  </div>
+
+  <div class="jar-wrap">
+    <div class="jar">
+      <span style="font-family:var(--font-display); font-weight:700;">My Stars</span>
+      <div class="stars" id="jarStars"></div>
+    </div>
+  </div>
+
+  <div class="level-wrap">
+    <button class="level-toggle locked" id="levelToggleBtn" onclick="toggleLevel()">🔒 Level 2 <span class="lvl-switch">· 5 activities to go</span></button>
+  </div>
+
+  <div class="tiles">
+    <button class="tile speech" onclick="openModule('speech')">
+      <div class="icon-wrap">🗣️</div>
+      <div class="label">Sound Out</div>
+      <div class="sub">Say the word</div>
+    </button>
+    <button class="tile words" onclick="openModule('words')">
+      <div class="icon-wrap">💬</div>
+      <div class="label">Word Builder</div>
+      <div class="sub">Tell me about it</div>
+    </button>
+    <button class="tile steps" onclick="openModule('steps')">
+      <div class="icon-wrap">📋</div>
+      <div class="label">First, Then</div>
+      <div class="sub">Put steps in order</div>
+    </button>
+    <button class="tile motor" onclick="openModule('motor')">
+      <div class="icon-wrap">✏️</div>
+      <div class="label">Trace It</div>
+      <div class="sub">Finger tracing</div>
+    </button>
+    <button class="tile calm" onclick="openModule('calm')">
+      <div class="icon-wrap">🌿</div>
+      <div class="label">Calm Corner</div>
+      <div class="sub">Breathe & reset</div>
+    </button>
+    <button class="tile social" onclick="openModule('social')">
+      <div class="icon-wrap">🎲</div>
+      <div class="label">Take Turns</div>
+      <div class="sub">Play together</div>
+    </button>
+  </div>
+
+  <div class="parent-link">
+    <button onclick="alert('Star Path\n\nA calm, low-stimulation set of 6 activities for speech and OT skill practice.\n\nLevel 2: completing Sound Out, Word Builder, First Then, Trace It, and Take Turns once each unlocks Level 2 — harder words, letters instead of shapes, longer routines, and a bigger matching board. Calm Corner has no level; it is always just for resetting.\n\nAll progress (stars, cleared activities, and level) resets when the app is closed or reloaded — this is intentional, so each session starts fresh and pressure-free.\n\nTap any tile to begin. The home button is always in the same top-left spot inside every activity.')">ℹ️ About this app</button>
+  </div>
+
+  <footer class="tip">Made with care for two awesome kids 💛</footer>
+</section>
+
+<!-- ============= 1. SPEECH ============= -->
+<section id="mod-speech" class="screen theme-speech">
+  <div class="topbar">
+    <button class="home-btn accent-border" onclick="goHome()">🏠 Home</button>
+    <div class="star-jar">⭐ <span id="starCountTop">0</span></div>
+  </div>
+  <div class="module-title">
+    <h2>🗣️ Sound Out</h2>
+    <p>Tap the picture, listen, then say the word out loud</p>
+    <div class="level-chip">Level 1</div>
+  </div>
+  <div class="stage">
+    <div class="big-card">
+      <div class="emoji-hero" id="speechEmoji">🐶</div>
+      <div class="prompt-word" id="speechWord">dog</div>
+      <div class="action-row">
+        <button class="pill-btn accent" id="hearItBtn" onclick="speakCurrentWord()">🔊 Hear it</button>
+        <button class="pill-btn ghost" onclick="speechGotIt()">✅ I said it!</button>
+      </div>
+    </div>
+    <div class="action-row">
+      <button class="pill-btn ghost" onclick="nextSpeechCard()">➡️ Next word</button>
+    </div>
+  </div>
+  <footer class="tip">Try starting with the first sound, then the whole word: “d... dog.”</footer>
+</section>
+
+<!-- ============= 2. WORDS ============= -->
+<section id="mod-words" class="screen theme-words">
+  <div class="topbar">
+    <button class="home-btn accent-border" onclick="goHome()">🏠 Home</button>
+    <div class="star-jar">⭐ <span id="starCountTop2">0</span></div>
+  </div>
+  <div class="module-title">
+    <h2>💬 Word Builder</h2>
+    <p>Build a sentence about the picture</p>
+    <div class="level-chip">Level 1</div>
+  </div>
+  <div class="stage">
+    <div class="big-card">
+      <div class="emoji-hero" id="wordsEmoji">🍎</div>
+      <div class="sentence-strip" id="sentenceStrip">I see a ___.</div>
+      <div class="word-bank" id="wordBank"></div>
+      <div class="action-row">
+        <button class="pill-btn ghost" id="readSentenceBtn" onclick="speakSentence()">🔊 Read my sentence</button>
+        <button class="pill-btn ghost" onclick="clearSentence()">↩️ Start over</button>
+      </div>
+    </div>
+    <div class="action-row">
+      <button class="pill-btn accent" onclick="wordsGotIt()">✅ Nice sentence!</button>
+      <button class="pill-btn ghost" id="sayItBtn" style="display:none;" onclick="wordsSaidIt()">🗣️ I said it out loud!</button>
+      <button class="pill-btn ghost" onclick="nextWordsCard()">➡️ Next picture</button>
+    </div>
+  </div>
+  <footer class="tip">Each describing word can only be used once per sentence — tap "Start over" for a fresh try.</footer>
+</section>
+
+<!-- ============= 3. STEPS ============= -->
+<section id="mod-steps" class="screen theme-steps">
+  <div class="topbar">
+    <button class="home-btn accent-border" onclick="goHome()">🏠 Home</button>
+    <div class="star-jar">⭐ <span id="starCountTop3">0</span></div>
+  </div>
+  <div class="module-title">
+    <h2>📋 First, Then</h2>
+    <p id="stepsSubtitle">Watch the order, then try it yourself</p>
+    <div class="level-chip">Level 1</div>
+  </div>
+  <div class="stage">
+    <div class="seq-picker" id="seqPicker"></div>
+    <div class="big-card">
+      <div class="step-slots" id="stepSlots"></div>
+    </div>
+    <div class="action-row" id="watchRow">
+      <button class="pill-btn accent" onclick="playDemo()">▶️ Watch the order</button>
+    </div>
+    <div class="option-row" id="stepOptions"></div>
+    <div class="action-row">
+      <button class="pill-btn ghost" onclick="resetSequence()">↩️ Reset</button>
+    </div>
+  </div>
+  <footer class="tip" id="stepsFooter">Tap "Watch the order" to see it done correctly, then tap a step and tap the spot you think it goes.</footer>
+</section>
+
+<!-- ============= 4. MOTOR / TRACE ============= -->
+<section id="mod-motor" class="screen theme-motor">
+  <div class="topbar">
+    <button class="home-btn accent-border" onclick="goHome()">🏠 Home</button>
+    <div class="star-jar">⭐ <span id="starCountTop4">0</span></div>
+  </div>
+  <div class="module-title">
+    <h2>✏️ Trace It</h2>
+    <p id="traceSubtitle">Watch it traced, then try it with your finger</p>
+    <div class="level-chip">Level 1</div>
+  </div>
+  <div class="stage">
+    <div class="shape-picker" id="shapePicker"></div>
+    <div class="trace-wrap">
+      <canvas id="traceCanvas" width="320" height="320"></canvas>
+      <div class="action-row" id="traceWatchRow">
+        <button class="pill-btn accent" onclick="playTraceDemo()">▶️ Watch it traced</button>
+      </div>
+      <div class="action-row" id="tracePracticeRow" style="display:none;">
+        <button class="pill-btn ghost" onclick="clearTrace()">🧹 Try again</button>
+        <button class="pill-btn accent" onclick="traceGotIt()">✅ All done!</button>
+      </div>
+    </div>
+  </div>
+  <footer class="tip" id="traceFooter">Slow and wobbly is great — it's all practice for pencil control.</footer>
+</section>
+
+<!-- ============= 5. CALM CORNER ============= -->
+<section id="mod-calm" class="screen theme-calm">
+  <div class="topbar">
+    <button class="home-btn accent-border" onclick="goHome()">🏠 Home</button>
+    <div class="star-jar">⭐ <span id="starCountTop5">0</span></div>
+  </div>
+  <div class="module-title">
+    <h2>🌿 Calm Corner</h2>
+    <p>A quiet moment to reset</p>
+  </div>
+  <div class="stage">
+    <div class="big-card">
+      <div class="breathe-circle" id="breatheCircle">Breathe</div>
+      <div class="action-row">
+        <button class="pill-btn accent" id="breatheBtn" onclick="toggleBreathing()">▶️ Start breathing</button>
+      </div>
+    </div>
+    <div class="big-card">
+      <h3 style="margin:0;">🎧 Quiet Sort</h3>
+      <p style="margin:0; color:var(--ink-soft); font-size:.9rem; text-align:center;">Fully silent, nothing to listen for — good for wearing ear defenders or noise-blocking headphones.</p>
+      <div class="seq-picker" id="sortPicker"></div>
+      <div class="sort-bins" id="sortBins"></div>
+      <div class="sort-items" id="sortItems"></div>
+      <div class="action-row">
+        <button class="pill-btn ghost" onclick="newSortRound()">🔄 New round</button>
+      </div>
+    </div>
+    <div class="big-card">
+      <h3 style="margin:0;">🫧 Pop the calm bubbles</h3>
+      <div class="bubble-field" id="bubbleField"></div>
+      <div class="action-row">
+        <button class="pill-btn ghost" onclick="refillBubbles()">🔄 New bubbles</button>
+        <button class="pill-btn ghost" id="bubbleSoundBtn" onclick="toggleBubbleSound()">🔈 Pop sounds: Off</button>
+      </div>
+    </div>
+  </div>
+  <footer class="tip">No stars here — this space is just for resetting, no pressure.</footer>
+</section>
+
+<!-- ============= 6. SOCIAL / TURN TAKING ============= -->
+<section id="mod-social" class="screen theme-social">
+  <div class="topbar">
+    <button class="home-btn accent-border" onclick="goHome()">🏠 Home</button>
+    <div class="star-jar">⭐ <span id="starCountTop6">0</span></div>
+  </div>
+  <div class="module-title">
+    <h2>🎲 Take Turns</h2>
+    <p>Two players find matching feelings — take turns flipping cards</p>
+    <div class="level-chip">Level 1</div>
+  </div>
+  <div class="stage">
+    <div class="turn-banner p1" id="turnBanner">Player 1's turn</div>
+    <div class="emo-grid" id="emoGrid"></div>
+    <div class="action-row">
+      <button class="pill-btn ghost" onclick="setupSocial()">🔄 New round</button>
+    </div>
+  </div>
+  <footer class="tip">Play as two kids, or one child vs. a grown-up — pass the iPad each turn.</footer>
+</section>
+
+<div class="praise-toast" id="praiseToast"></div>
+
+<script>
+/* ============================================================
+   SHARED STATE
+============================================================ */
+let totalStars = 0;
+const praises = ["Awesome job! ⭐","You did it! 🎉","Great work! 🌟","Nice one! 👏","So proud of you! 💛","You're a star! ✨"];
+
+function addStar(){
+  totalStars++;
+  renderJar();
+  ['starCountTop','starCountTop2','starCountTop3','starCountTop4','starCountTop5','starCountTop6'].forEach(id=>{
+    const el = document.getElementById(id);
+    if(el) el.textContent = totalStars;
+  });
+  showPraise();
+}
+function showPraise(){
+  const toast = document.getElementById('praiseToast');
+  toast.textContent = praises[Math.floor(Math.random()*praises.length)];
+  toast.classList.add('show');
+  clearTimeout(window._praiseTimer);
+  window._praiseTimer = setTimeout(()=>toast.classList.remove('show'), 1600);
+}
+function starSVG(filled){
+  return `<svg viewBox="0 0 24 24" fill="${filled?'#F2B807':'none'}" stroke="#F2B807" stroke-width="1.6"><path d="M12 2l2.9 6.5L22 9.3l-5 4.7L18.4 21 12 17.3 5.6 21 7 14l-5-4.7 7.1-.8z"/></svg>`;
+}
+function renderJar(){
+  const jar = document.getElementById('jarStars');
+  const show = Math.min(totalStars, 12);
+  jar.innerHTML = Array.from({length: Math.max(show,1)}).map((_,i)=> starSVG(i<show)).join('');
+  if(totalStars>12){ jar.innerHTML += `<span style="font-family:var(--font-display); font-weight:700; margin-left:4px;">+${totalStars-12}</span>`; }
+}
+renderJar();
+
+/* ============================================================
+   LEVEL SYSTEM — Level 2 unlocks once each skill activity
+   (Sound Out, Word Builder, First Then, Trace It, Take Turns)
+   has been completed at least once this session.
+   Calm Corner is excluded on purpose — it's a self-regulation
+   space, not a skill to "clear."
+============================================================ */
+let currentLevel = 1;
+let level2Unlocked = false;
+const clearedModules = new Set();
+const REQUIRED_FOR_LEVEL2 = ['speech','words','steps','motor','social'];
+
+function markModuleCleared(name){
+  if(clearedModules.has(name)) return;
+  clearedModules.add(name);
+  updateLevelBadge();
+  if(!level2Unlocked && REQUIRED_FOR_LEVEL2.every(m=>clearedModules.has(m))){
+    level2Unlocked = true;
+    setTimeout(showLevel2Unlock, 500);
+  }
+}
+function updateLevelBadge(){
+  const el = document.getElementById('levelToggleBtn');
+  if(!el) return;
+  if(level2Unlocked){
+    el.classList.remove('locked');
+    el.innerHTML = currentLevel===2 ? '🌟 Level 2 <span class="lvl-switch">· tap for Level 1</span>' : '🔓 Level 1 <span class="lvl-switch">· tap for Level 2</span>';
+  } else {
+    const remaining = REQUIRED_FOR_LEVEL2.length - clearedModules.size;
+    el.classList.add('locked');
+    el.innerHTML = `🔒 Level 2 <span class="lvl-switch">· ${remaining} activity${remaining===1?'':'ies'} to go</span>`;
+  }
+}
+function toggleLevel(){
+  if(!level2Unlocked) return;
+  setLevel(currentLevel===2 ? 1 : 2);
+}
+function setLevel(lvl){
+  currentLevel = lvl;
+  speechIndex = 0;
+  wordsIndex = 0;
+  if(typeof getShapeSet==='function'){ currentShape = Object.keys(getShapeSet())[0]; }
+  if(typeof getSequenceSet==='function'){ currentSeqName = Object.keys(getSequenceSet())[0]; }
+  updateLevelBadge();
+  document.querySelectorAll('.level-chip').forEach(el=> el.textContent = 'Level '+currentLevel);
+}
+function showLevel2Unlock(){
+  const toast = document.getElementById('praiseToast');
+  toast.innerHTML = '🎉 Level 2 unlocked!';
+  toast.classList.add('show');
+  clearTimeout(window._praiseTimer);
+  window._praiseTimer = setTimeout(()=>toast.classList.remove('show'), 2400);
+  speak('You unlocked level 2! Amazing work!', 0.95);
+}
+
+/* ---- soft synthesized bubble-pop sound (opt-in, off by default) ---- */
+let bubbleSoundOn = false;
+let audioCtx = null;
+function getAudioCtx(){
+  if(!audioCtx){
+    try{ audioCtx = new (window.AudioContext || window.webkitAudioContext)(); }catch(e){ return null; }
+  }
+  return audioCtx;
+}
+function playPopSound(){
+  const ctx = getAudioCtx();
+  if(!ctx) return;
+  if(ctx.state === 'suspended') ctx.resume();
+  const now = ctx.currentTime;
+  const osc = ctx.createOscillator();
+  const gain = ctx.createGain();
+  osc.type = 'sine';
+  osc.frequency.setValueAtTime(500, now);
+  osc.frequency.exponentialRampToValueAtTime(210, now+0.09);
+  gain.gain.setValueAtTime(0.0001, now);
+  gain.gain.exponentialRampToValueAtTime(0.16, now+0.015);
+  gain.gain.exponentialRampToValueAtTime(0.0001, now+0.12);
+  osc.connect(gain); gain.connect(ctx.destination);
+  osc.start(now); osc.stop(now+0.13);
+}
+function toggleBubbleSound(){
+  bubbleSoundOn = !bubbleSoundOn;
+  const btn = document.getElementById('bubbleSoundBtn');
+  if(btn) btn.textContent = bubbleSoundOn ? '🔊 Pop sounds: On' : '🔈 Pop sounds: Off';
+  if(bubbleSoundOn) playPopSound();
+}
+
+const FEMALE_VOICE_HINTS = ['female','samantha','victoria','karen','moira','tessa','fiona','kate','serena',
+  'susan','zira','ava','allison','alice','anna','ellen','ioana','joana','laura','luciana','monica',
+  'paulina','sara','vicki','zosia','nicky','shelley','emma','amy','joanna','salli','kendra','kimberly',
+  'google us english','google uk english female'];
+let preferredVoice = null;
+function pickPreferredVoice(){
+  if(!('speechSynthesis' in window)) return;
+  const voices = window.speechSynthesis.getVoices();
+  if(!voices.length) return;
+  const isFemaleHint = v => FEMALE_VOICE_HINTS.some(h => v.name.toLowerCase().includes(h));
+  let match = voices.find(v => v.lang && v.lang.toLowerCase().startsWith('en') && isFemaleHint(v));
+  if(!match) match = voices.find(v => isFemaleHint(v));
+  if(!match) match = voices.find(v => v.lang && v.lang.toLowerCase().startsWith('en') && !/male/i.test(v.name));
+  if(!match) match = voices.find(v => v.lang && v.lang.toLowerCase().startsWith('en'));
+  preferredVoice = match || voices[0];
+}
+if('speechSynthesis' in window){
+  pickPreferredVoice();
+  window.speechSynthesis.onvoiceschanged = pickPreferredVoice;
+}
+
+function speak(text, rate=0.92){
+  try{
+    if(!('speechSynthesis' in window)) return;
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    if(preferredVoice) u.voice = preferredVoice;
+    u.rate = rate;
+    u.pitch = 1.0;
+    window.speechSynthesis.speak(u);
+  }catch(e){ /* speech not available, fail silently */ }
+}
+
+/* ============================================================
+   NAVIGATION
+============================================================ */
+function goHome(){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById('home').classList.add('active');
+  try{ window.speechSynthesis.cancel(); }catch(e){}
+  stopBreathing();
+}
+function openModule(name){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById('mod-'+name).classList.add('active');
+  if(name==='speech') renderSpeechCard();
+  if(name==='words') renderWordsCard();
+  if(name==='steps') renderSequenceScreen();
+  if(name==='motor') renderTraceScreen();
+  if(name==='calm') renderCalmScreen();
+  if(name==='social') setupSocial();
+}
+
+/* ============================================================
+   1. SPEECH — picture/word cards
+============================================================ */
+const speechDeckLevel1 = [
+  {emoji:'🐶', word:'dog'}, {emoji:'🐱', word:'cat'}, {emoji:'☀️', word:'sun'},
+  {emoji:'🚗', word:'car'}, {emoji:'🐟', word:'fish'}, {emoji:'🎈', word:'balloon'},
+  {emoji:'🍌', word:'banana'}, {emoji:'⚽', word:'ball'}, {emoji:'🌙', word:'moon'},
+  {emoji:'🐻', word:'bear'}, {emoji:'🚌', word:'bus'}, {emoji:'🥛', word:'milk'}
+];
+const speechDeckLevel2 = [
+  {emoji:'🐘', word:'elephant'}, {emoji:'☂️', word:'umbrella'}, {emoji:'🦋', word:'butterfly'},
+  {emoji:'🦕', word:'dinosaur'}, {emoji:'🚲', word:'bicycle'}, {emoji:'💻', word:'computer'},
+  {emoji:'🐊', word:'alligator'}, {emoji:'🌈', word:'rainbow'}, {emoji:'🐙', word:'octopus'},
+  {emoji:'🦘', word:'kangaroo'}, {emoji:'🍓', word:'strawberry'}, {emoji:'🚁', word:'helicopter'}
+];
+function getSpeechDeck(){ return currentLevel===2 ? speechDeckLevel2 : speechDeckLevel1; }
+let speechIndex = 0;
+const MAX_REPEATS = 3;
+let speechPlayCount = 0;
+let speechClearCount = 0;
+function renderSpeechCard(){
+  const deck = getSpeechDeck();
+  const card = deck[speechIndex % deck.length];
+  document.getElementById('speechEmoji').textContent = card.emoji;
+  document.getElementById('speechWord').textContent = card.word;
+  speechPlayCount = 0;
+  updateHearItButton();
+}
+function updateHearItButton(){
+  const btn = document.getElementById('hearItBtn');
+  if(!btn) return;
+  const remaining = MAX_REPEATS - speechPlayCount;
+  if(remaining <= 0){
+    btn.classList.add('capped');
+    btn.innerHTML = `🔊 Now you try!`;
+  } else {
+    btn.classList.remove('capped');
+    btn.innerHTML = `🔊 Hear it`;
+  }
+}
+function speakCurrentWord(){
+  if(speechPlayCount >= MAX_REPEATS) return;
+  const deck = getSpeechDeck();
+  const card = deck[speechIndex % deck.length];
+  speak(card.word);
+  speechPlayCount++;
+  updateHearItButton();
+}
+function speechGotIt(){
+  addStar();
+  speechClearCount++;
+  if(speechClearCount >= 5) markModuleCleared('speech');
+  nextSpeechCard();
+}
+function nextSpeechCard(){
+  speechIndex++;
+  renderSpeechCard();
+}
+
+/* ============================================================
+   2. WORDS — sentence builder
+============================================================ */
+const wordsDeckLevel1 = [
+  { emoji:'🍎', starter:'I see a', noun:'apple', descriptors:['red','round','yummy'] },
+  { emoji:'🐘', starter:'I see a', noun:'elephant', descriptors:['big','gray','strong'] },
+  { emoji:'🌧️', starter:'I see', noun:'rain', descriptors:['wet','gray','cold'] },
+  { emoji:'🎂', starter:'I see a', noun:'cake', descriptors:['sweet','round','yummy'] },
+  { emoji:'🐢', starter:'I see a', noun:'turtle', descriptors:['slow','green','small'] },
+  { emoji:'🔥', starter:'I see', noun:'fire', descriptors:['hot','orange','bright'] },
+];
+const wordsDeckLevel2 = [
+  { emoji:'🌈', starter:'I see a', noun:'rainbow', descriptors:['colorful','curved','pretty'] },
+  { emoji:'🐝', starter:'I see a', noun:'bee', descriptors:['busy','yellow','buzzing'] },
+  { emoji:'⛄', starter:'I see a', noun:'snowman', descriptors:['cold','round','white'] },
+  { emoji:'🚀', starter:'I see a', noun:'rocket', descriptors:['fast','tall','loud'] },
+  { emoji:'🦋', starter:'I see a', noun:'butterfly', descriptors:['colorful','gentle','flying'] },
+  { emoji:'🌻', starter:'I see a', noun:'sunflower', descriptors:['tall','yellow','bright'] },
+];
+function getWordsDeck(){ return currentLevel===2 ? wordsDeckLevel2 : wordsDeckLevel1; }
+let wordsIndex = 0;
+let sentenceParts = [];
+let descriptorUsage = {};
+let sentencePlayCount = 0;
+let wordsClearCount = 0;
+function renderWordsCard(){
+  const deck = getWordsDeck();
+  const c = deck[wordsIndex % deck.length];
+  document.getElementById('wordsEmoji').textContent = c.emoji;
+  sentenceParts = [c.starter, c.noun];
+  descriptorUsage = {};
+  sentencePlayCount = 0;
+  updateSentenceStrip();
+  updateReadButton();
+  const sayBtn = document.getElementById('sayItBtn');
+  if(sayBtn) sayBtn.style.display = currentLevel===2 ? 'flex' : 'none';
+  const bank = document.getElementById('wordBank');
+  bank.innerHTML = '';
+  c.descriptors.forEach(word=>{
+    descriptorUsage[word] = 0;
+    const btn = document.createElement('button');
+    btn.className = 'word-chip';
+    btn.dataset.word = word;
+    btn.innerHTML = renderChipLabel(word, false);
+    btn.onclick = ()=> useDescriptor(word, btn);
+    bank.appendChild(btn);
+  });
+}
+const MAX_WORD_USE = 1;
+function renderChipLabel(word, used){
+  return used ? `${word} <span style="opacity:.8;">✓</span>` : word;
+}
+function useDescriptor(word, btn){
+  if(descriptorUsage[word] >= MAX_WORD_USE) return;
+  descriptorUsage[word]++;
+  sentenceParts.push('It is', word+'.');
+  updateSentenceStrip();
+  btn.innerHTML = renderChipLabel(word, true);
+  btn.classList.add('capped');
+}
+function updateSentenceStrip(){
+  document.getElementById('sentenceStrip').textContent = sentenceParts.join(' ');
+}
+function clearSentence(){
+  const deck = getWordsDeck();
+  const c = deck[wordsIndex % deck.length];
+  sentenceParts = [c.starter, c.noun];
+  descriptorUsage = {};
+  updateSentenceStrip();
+  const bank = document.getElementById('wordBank');
+  bank.querySelectorAll('.word-chip').forEach(btn=>{
+    const word = btn.dataset.word;
+    descriptorUsage[word] = 0;
+    btn.classList.remove('capped');
+    btn.innerHTML = renderChipLabel(word, false);
+  });
+}
+function updateReadButton(){
+  const btn = document.getElementById('readSentenceBtn');
+  if(!btn) return;
+  if(sentencePlayCount >= MAX_REPEATS){
+    btn.classList.add('capped');
+    btn.innerHTML = `🔊 Read my sentence`;
+  } else {
+    btn.classList.remove('capped');
+    btn.innerHTML = `🔊 Read my sentence`;
+  }
+}
+function speakSentence(){
+  if(sentencePlayCount >= MAX_REPEATS) return;
+  speak(sentenceParts.join(' '));
+  sentencePlayCount++;
+  updateReadButton();
+}
+function wordsGotIt(){
+  addStar();
+  wordsClearCount++;
+  if(wordsClearCount >= 3) markModuleCleared('words');
+}
+function wordsSaidIt(){
+  addStar();
+}
+function nextWordsCard(){ wordsIndex++; renderWordsCard(); }
+
+/* ============================================================
+   3. STEPS — sequencing / following directions
+============================================================ */
+const sequencesLevel1 = {
+  'Wash Hands 🧼': ['Turn on water','Add soap','Rub hands','Rinse off','Dry with towel'],
+  'Get Dressed 👕': ['Put on shirt','Put on pants','Put on socks','Put on shoes'],
+  'Brush Teeth 🦷': ['Get toothbrush','Add toothpaste','Brush teeth','Rinse mouth'],
+  'Set the Table 🍽️': ['Put down placemat','Add plate','Add fork','Add cup'],
+};
+const sequencesLevel2 = {
+  'Make a Sandwich 🥪': ['Get bread','Spread peanut butter','Spread jelly','Put bread together','Cut in half'],
+  'Bedtime Routine 🛏️': ['Put on pajamas','Brush teeth','Read a book','Turn off light','Go to sleep'],
+  'Pack Backpack 🎒': ['Get backpack','Add books','Add lunch box','Add water bottle','Zip it up'],
+  'Wash Dishes 🍽️': ['Turn on water','Add soap','Scrub plate','Rinse plate','Dry with towel'],
+};
+function getSequenceSet(){ return currentLevel===2 ? sequencesLevel2 : sequencesLevel1; }
+let currentSeqName = Object.keys(sequencesLevel1)[0];
+let filledCount = 0;
+let seqMode = 'watch'; // 'watch' | 'practice'
+let selectedStepBtn = null;
+let selectedStepText = null;
+let demoRunning = false;
+let stepsClearedThisSeq = false;
+
+function renderSequenceScreen(){
+  const seqs = getSequenceSet();
+  if(!seqs[currentSeqName]) currentSeqName = Object.keys(seqs)[0];
+  const picker = document.getElementById('seqPicker');
+  picker.innerHTML = '';
+  Object.keys(seqs).forEach(name=>{
+    const b = document.createElement('button');
+    b.className = 'pill-btn ghost' + (name===currentSeqName?' selected':'');
+    b.textContent = name;
+    b.onclick = ()=>{ currentSeqName = name; resetSequence(); };
+    picker.appendChild(b);
+  });
+  resetSequence();
+}
+
+function buildEmptySlots(){
+  const steps = getSequenceSet()[currentSeqName];
+  const slots = document.getElementById('stepSlots');
+  slots.innerHTML = '';
+  steps.forEach((_,i)=>{
+    const slot = document.createElement('div');
+    slot.className = 'slot';
+    slot.id = 'slot-'+i;
+    slot.innerHTML = `<div class="num">${i+1}</div><div class="slot-text">&nbsp;</div>`;
+    slot.onclick = ()=> attemptPlacement(i, slot);
+    slots.appendChild(slot);
+  });
+}
+
+function resetSequence(){
+  clearTimeout(window._demoTimer);
+  demoRunning = false;
+  filledCount = 0;
+  stepsClearedThisSeq = false;
+  selectedStepBtn = null;
+  selectedStepText = null;
+  document.querySelectorAll('#seqPicker .pill-btn').forEach(b=>{
+    b.classList.toggle('selected', b.textContent===currentSeqName);
+  });
+  if(currentLevel===2){
+    // Level 2: they've already shown they can watch-and-learn — go straight to practice,
+    // with "Watch the order" still available as an optional refresher.
+    seqMode = 'watch';
+    buildEmptySlots();
+    document.getElementById('watchRow').style.display = 'flex';
+    document.getElementById('stepsSubtitle').textContent = 'Level 2: build it from memory (or watch a refresher first)';
+    document.getElementById('stepsFooter').textContent = 'Tap a step, then tap the spot you think it goes — steps that miss just bounce back.';
+    startPractice();
+  } else {
+    seqMode = 'watch';
+    buildEmptySlots();
+    document.getElementById('stepOptions').innerHTML = '';
+    document.getElementById('watchRow').style.display = 'flex';
+    document.getElementById('stepsSubtitle').textContent = 'Watch the order, then try it yourself';
+    document.getElementById('stepsFooter').textContent = 'Tap "Watch the order" to see it done correctly, then tap a step and tap the spot you think it goes.';
+  }
+}
+
+function playDemo(){
+  if(demoRunning) return;
+  demoRunning = true;
+  seqMode = 'watch';
+  selectedStepBtn = null; selectedStepText = null;
+  buildEmptySlots();
+  document.getElementById('stepOptions').innerHTML = '';
+  const steps = getSequenceSet()[currentSeqName];
+  document.getElementById('stepsSubtitle').textContent = 'Watch how the steps go in order...';
+  let i = 0;
+  const showNext = ()=>{
+    if(i >= steps.length){
+      demoRunning = false;
+      window._demoTimer = setTimeout(startPractice, 900);
+      return;
+    }
+    const slot = document.getElementById('slot-'+i);
+    slot.querySelector('.slot-text').textContent = steps[i];
+    slot.classList.add('filled');
+    speak(steps[i], 0.9);
+    i++;
+    window._demoTimer = setTimeout(showNext, 1300);
+  };
+  showNext();
+}
+
+function startPractice(){
+  seqMode = 'practice';
+  filledCount = 0;
+  buildEmptySlots();
+  document.getElementById('watchRow').style.display = currentLevel===2 ? 'flex' : 'none';
+  if(currentLevel!==2){
+    document.getElementById('stepsSubtitle').textContent = 'Now you try! Tap a step, then tap its spot.';
+    document.getElementById('stepsFooter').textContent = 'If a step goes in the wrong spot, it will bounce back — just try another spot.';
+  }
+  const steps = getSequenceSet()[currentSeqName];
+  const shuffled = [...steps].sort(()=>Math.random()-0.5);
+  const opts = document.getElementById('stepOptions');
+  opts.innerHTML = '';
+  shuffled.forEach(step=>{
+    const b = document.createElement('button');
+    b.className = 'step-option';
+    b.textContent = step;
+    b.onclick = ()=> selectStep(step, b);
+    opts.appendChild(b);
+  });
+}
+
+function selectStep(step, btnEl){
+  if(seqMode !== 'practice') return;
+  if(selectedStepBtn === btnEl){
+    // tapping the same step again deselects it
+    btnEl.classList.remove('selected');
+    selectedStepBtn = null; selectedStepText = null;
+    clearAwaitingSlots();
+    return;
+  }
+  if(selectedStepBtn) selectedStepBtn.classList.remove('selected');
+  selectedStepBtn = btnEl;
+  selectedStepText = step;
+  btnEl.classList.add('selected');
+  markAwaitingSlots();
+}
+
+function markAwaitingSlots(){
+  document.querySelectorAll('.slot').forEach(s=>{
+    if(!s.classList.contains('filled')) s.classList.add('awaiting');
+  });
+}
+function clearAwaitingSlots(){
+  document.querySelectorAll('.slot').forEach(s=> s.classList.remove('awaiting'));
+}
+
+function attemptPlacement(slotIndex, slotEl){
+  if(seqMode !== 'practice' || !selectedStepText) return;
+  if(slotEl.classList.contains('filled')) return;
+  const correctOrder = getSequenceSet()[currentSeqName];
+  const correctIndex = correctOrder.indexOf(selectedStepText);
+  if(slotIndex === correctIndex){
+    slotEl.querySelector('.slot-text').textContent = selectedStepText;
+    slotEl.classList.add('filled');
+    slotEl.classList.remove('awaiting');
+    speak(selectedStepText, 0.95);
+    selectedStepBtn.classList.remove('selected');
+    selectedStepBtn.classList.add('used');
+    selectedStepBtn = null; selectedStepText = null;
+    clearAwaitingSlots();
+    filledCount++;
+    if(filledCount === correctOrder.length){
+      setTimeout(()=>{ addStar(); }, 300);
+      if(!stepsClearedThisSeq){ stepsClearedThisSeq = true; markModuleCleared('steps'); }
+    }
+  } else {
+    slotEl.classList.add('shake');
+    setTimeout(()=> slotEl.classList.remove('shake'), 400);
+  }
+}
+
+/* ============================================================
+   4. MOTOR — canvas tracing (watch demo, then forgiving practice)
+============================================================ */
+function sampleLine(x1,y1,x2,y2,n){
+  const pts=[];
+  for(let i=0;i<n;i++){ const t=i/(n-1); pts.push({x:x1+(x2-x1)*t, y:y1+(y2-y1)*t}); }
+  return pts;
+}
+function sampleCubicBezier(p0,p1,p2,p3,n){
+  const pts=[];
+  for(let i=0;i<n;i++){
+    const t=i/(n-1), mt=1-t;
+    const x = mt*mt*mt*p0.x + 3*mt*mt*t*p1.x + 3*mt*t*t*p2.x + t*t*t*p3.x;
+    const y = mt*mt*mt*p0.y + 3*mt*mt*t*p1.y + 3*mt*t*t*p2.y + t*t*t*p3.y;
+    pts.push({x,y});
+  }
+  return pts;
+}
+function sampleCircle(cx,cy,r,n){
+  const pts=[];
+  for(let i=0;i<=n;i++){ const a=-Math.PI/2+(i/n)*Math.PI*2; pts.push({x:cx+r*Math.cos(a), y:cy+r*Math.sin(a)}); }
+  return pts;
+}
+function sampleZigzag(vertices,n){
+  const segs=[]; let total=0;
+  for(let i=0;i<vertices.length-1;i++){
+    const [x1,y1]=vertices[i], [x2,y2]=vertices[i+1];
+    const len=Math.hypot(x2-x1,y2-y1);
+    segs.push({x1,y1,x2,y2,len}); total+=len;
+  }
+  const pts=[];
+  for(let i=0;i<n;i++){
+    let d=(i/(n-1))*total, seg=segs[segs.length-1];
+    for(const s of segs){ if(d<=s.len){ seg=s; break; } d-=s.len; }
+    const t = seg.len? d/seg.len : 0;
+    pts.push({x:seg.x1+(seg.x2-seg.x1)*t, y:seg.y1+(seg.y2-seg.y1)*t});
+  }
+  return pts;
+}
+function sampleArc(cx,cy,r,startDeg,endDeg,n){
+  const pts=[];
+  const start = startDeg*Math.PI/180, end = endDeg*Math.PI/180;
+  for(let i=0;i<n;i++){ const t=i/(n-1); const a=start+(end-start)*t; pts.push({x:cx+r*Math.cos(a), y:cy+r*Math.sin(a)}); }
+  return pts;
+}
+const shapesLevel1 = {
+  'Circle ⭕': sampleCircle(160,160,100,70),
+  'Line ➖': sampleLine(40,160,280,160,40),
+  'Zigzag ⚡': sampleZigzag([[40,80],[140,220],[180,80],[280,220]], 60),
+};
+// Level 2: real letters. Each is chosen so it can be formed as ONE continuous
+// stroke (no pen lifts) — the same way handwriting programs teach early letters.
+const shapesLevel2 = {
+  'Letter L 🔤': sampleZigzag([[100,60],[100,260],[220,260]], 45),
+  'Letter V 🔤': sampleZigzag([[100,70],[160,250],[220,70]], 45),
+  'Letter Z 🔤': sampleZigzag([[90,80],[230,80],[90,240],[230,240]], 55),
+  'Letter O 🔤': sampleCircle(160,160,90,60),
+  'Letter C 🔤': sampleArc(160,160,90,40,320,50),
+  'Letter U 🔤': sampleCubicBezier({x:110,y:80},{x:90,y:260},{x:230,y:260},{x:210,y:80}, 50),
+  'Letter S 🔤': [
+    ...sampleCubicBezier({x:200,y:90},{x:100,y:60},{x:90,y:140},{x:160,y:160}, 35),
+    ...sampleCubicBezier({x:160,y:160},{x:230,y:180},{x:220,y:260},{x:120,y:240}, 35)
+  ]
+};
+function getShapeSet(){ return currentLevel===2 ? shapesLevel2 : shapesLevel1; }
+function getTraceTolerance(){ return currentLevel===2 ? 34 : 42; }
+function getTraceCompleteRatio(){ return currentLevel===2 ? 0.6 : 0.55; }
+
+let currentShape = Object.keys(shapesLevel1)[0];
+let traceCtx, drawing=false;
+let traceMode = 'watch'; // 'watch' | 'demo' | 'practice'
+let demoTraceTimer;
+let coveredSet = new Set();
+let traceCompleted = false;
+
+function renderTraceScreen(){
+  const shapes = getShapeSet();
+  if(!shapes[currentShape]) currentShape = Object.keys(shapes)[0];
+  const picker = document.getElementById('shapePicker');
+  picker.innerHTML = '';
+  Object.keys(shapes).forEach(name=>{
+    const b = document.createElement('button');
+    b.className = 'pill-btn ghost' + (name===currentShape?' selected':'');
+    b.textContent = name;
+    b.onclick = ()=>{ currentShape = name; resetTraceToWatch(); highlightShapePicker(); };
+    picker.appendChild(b);
+  });
+  highlightShapePicker();
+  const canvas = document.getElementById('traceCanvas');
+  traceCtx = canvas.getContext('2d');
+  setupCanvasEvents(canvas);
+  resetTraceToWatch();
+}
+function highlightShapePicker(){
+  document.querySelectorAll('#shapePicker .pill-btn').forEach(b=>{
+    b.classList.toggle('selected', b.textContent===currentShape);
+  });
+}
+function drawGuide(){
+  const canvas = document.getElementById('traceCanvas');
+  const w = canvas.width, h = canvas.height;
+  traceCtx.clearRect(0,0,w,h);
+  traceCtx.save();
+  traceCtx.strokeStyle = '#C9C2B4';
+  traceCtx.lineWidth = 6;
+  traceCtx.setLineDash([2,14]);
+  traceCtx.lineCap = 'round'; traceCtx.lineJoin = 'round';
+  const pts = getShapeSet()[currentShape];
+  traceCtx.beginPath();
+  traceCtx.moveTo(pts[0].x, pts[0].y);
+  for(let i=1;i<pts.length;i++) traceCtx.lineTo(pts[i].x, pts[i].y);
+  traceCtx.stroke();
+  traceCtx.restore();
+}
+function resetTraceToWatch(){
+  clearTimeout(demoTraceTimer);
+  traceMode = 'watch';
+  coveredSet = new Set();
+  traceCompleted = false;
+  drawGuide();
+  document.getElementById('traceWatchRow').style.display = 'flex';
+  document.getElementById('tracePracticeRow').style.display = 'none';
+  document.getElementById('traceSubtitle').textContent = 'Watch it traced, then try it with your finger';
+  document.getElementById('traceFooter').textContent = 'Tap "Watch it traced" to see the path, then try it yourself.';
+}
+function playTraceDemo(){
+  if(traceMode==='demo') return;
+  traceMode = 'demo';
+  drawGuide();
+  document.getElementById('traceSubtitle').textContent = 'Watch the path...';
+  const points = getShapeSet()[currentShape];
+  traceCtx.strokeStyle = 'rgba(111,169,138,0.9)';
+  traceCtx.lineWidth = 10; traceCtx.lineCap = 'round'; traceCtx.lineJoin='round'; traceCtx.setLineDash([]);
+  traceCtx.beginPath();
+  traceCtx.moveTo(points[0].x, points[0].y);
+  const stepMs = Math.max(12, Math.floor(1800/points.length));
+  let i = 1;
+  const drawNext = ()=>{
+    if(i >= points.length){
+      demoTraceTimer = setTimeout(startTracePractice, 700);
+      return;
+    }
+    traceCtx.lineTo(points[i].x, points[i].y);
+    traceCtx.stroke();
+    i++;
+    demoTraceTimer = setTimeout(drawNext, stepMs);
+  };
+  drawNext();
+}
+function startTracePractice(){
+  traceMode = 'practice';
+  coveredSet = new Set();
+  traceCompleted = false;
+  drawGuide();
+  document.getElementById('traceWatchRow').style.display = 'none';
+  document.getElementById('tracePracticeRow').style.display = 'flex';
+  document.getElementById('traceSubtitle').textContent = 'Your turn — trace with one finger';
+  document.getElementById('traceFooter').textContent = "Slow and wobbly is great — the line only draws near the shape, so it's always on track.";
+}
+function clearTrace(){
+  coveredSet = new Set();
+  traceCompleted = false;
+  drawGuide();
+}
+function isNearGuide(p){
+  const points = getShapeSet()[currentShape];
+  const tol2 = getTraceTolerance()*getTraceTolerance();
+  for(let i=0;i<points.length;i++){
+    const dx = points[i].x-p.x, dy = points[i].y-p.y;
+    if(dx*dx+dy*dy <= tol2) return true;
+  }
+  return false;
+}
+function registerCoverage(p){
+  if(traceCompleted) return;
+  const points = getShapeSet()[currentShape];
+  const tol2 = getTraceTolerance()*getTraceTolerance();
+  for(let i=0;i<points.length;i++){
+    if(coveredSet.has(i)) continue;
+    const dx = points[i].x-p.x, dy = points[i].y-p.y;
+    if(dx*dx+dy*dy <= tol2) coveredSet.add(i);
+  }
+  if(coveredSet.size/points.length >= getTraceCompleteRatio()){
+    traceCompleted = true;
+    setTimeout(()=>{ addStar(); markModuleCleared('motor'); }, 200);
+  }
+}
+let lastDrawPoint = null;
+function setupCanvasEvents(canvas){
+  const getPos = (e)=>{
+    const rect = canvas.getBoundingClientRect();
+    const point = e.touches ? e.touches[0] : e;
+    return { x:(point.clientX-rect.left)*(canvas.width/rect.width), y:(point.clientY-rect.top)*(canvas.height/rect.height) };
+  };
+  const start = (e)=>{
+    if(traceMode!=='practice') return;
+    drawing = true;
+    const p = getPos(e);
+    if(isNearGuide(p)){ lastDrawPoint = p; registerCoverage(p); }
+    else { lastDrawPoint = null; }
+    e.preventDefault();
+  };
+  const move = (e)=>{
+    if(!drawing || traceMode!=='practice') return;
+    const p = getPos(e);
+    if(isNearGuide(p)){
+      if(lastDrawPoint){
+        traceCtx.strokeStyle = 'rgba(111,169,138,0.85)';
+        traceCtx.lineWidth = 10; traceCtx.lineCap = 'round'; traceCtx.lineJoin = 'round'; traceCtx.setLineDash([]);
+        traceCtx.beginPath();
+        traceCtx.moveTo(lastDrawPoint.x, lastDrawPoint.y);
+        traceCtx.lineTo(p.x, p.y);
+        traceCtx.stroke();
+      }
+      lastDrawPoint = p;
+      registerCoverage(p);
+    } else {
+      // finger strayed off the shape — lift the pen, no ink drawn until back on the path
+      lastDrawPoint = null;
+    }
+    e.preventDefault();
+  };
+  const end = ()=>{ drawing = false; lastDrawPoint = null; };
+  canvas.onpointerdown = start; canvas.onpointermove = move; canvas.onpointerup = end; canvas.onpointerleave = end;
+  canvas.ontouchstart = start; canvas.ontouchmove = move; canvas.ontouchend = end;
+}
+function traceGotIt(){
+  if(!traceCompleted){ traceCompleted = true; addStar(); markModuleCleared('motor'); }
+  else { showPraise(); }
+}
+
+/* ============================================================
+   5. CALM CORNER — breathing + bubbles
+============================================================ */
+let breathing = false, breatheTimer;
+function toggleBreathing(){
+  breathing = !breathing;
+  const btn = document.getElementById('breatheBtn');
+  const circle = document.getElementById('breatheCircle');
+  if(breathing){
+    btn.textContent = '⏸️ Stop';
+    breatheCycle(circle);
+  } else {
+    stopBreathing();
+  }
+}
+function breatheCycle(circle){
+  if(!breathing) return;
+  circle.classList.add('big');
+  circle.textContent = 'Breathe in...';
+  speak('Breathe in', 0.8);
+  breatheTimer = setTimeout(()=>{
+    if(!breathing) return;
+    circle.classList.remove('big');
+    circle.textContent = 'Breathe out...';
+    speak('Breathe out', 0.8);
+    breatheTimer = setTimeout(()=>{ breatheCycle(circle); }, 4000);
+  }, 4000);
+}
+function stopBreathing(){
+  breathing = false;
+  clearTimeout(breatheTimer);
+  const btn = document.getElementById('breatheBtn');
+  const circle = document.getElementById('breatheCircle');
+  if(btn) btn.textContent = '▶️ Start breathing';
+  if(circle){ circle.classList.remove('big'); circle.textContent = 'Breathe'; }
+}
+function renderCalmScreen(){
+  stopBreathing();
+  refillBubbles();
+  renderSortPicker();
+  newSortRound();
+}
+function refillBubbles(){
+  const field = document.getElementById('bubbleField');
+  field.innerHTML = '';
+  for(let i=0;i<15;i++){
+    const b = document.createElement('div');
+    b.className = 'bubble';
+    b.onclick = ()=>{ b.classList.add('popped'); if(bubbleSoundOn) playPopSound(); };
+    field.appendChild(b);
+  }
+}
+
+/* ---- Quiet Sort — a fully silent, visual-only sorting activity.
+   Designed to be done while wearing ear defenders / noise-blocking
+   headphones: no audio cues, no sound feedback, no time pressure. ---- */
+const sortColorDefs = [
+  {id:'red', emoji:'', css:'#E8846B', soft:'#FBE3DA'},
+  {id:'blue', emoji:'', css:'#5B9BD5', soft:'#DDEAF6'},
+  {id:'yellow', emoji:'', css:'#E3A857', soft:'#FBEBD3'},
+  {id:'green', emoji:'', css:'#6FA98A', soft:'#DDEEE4'}
+];
+const sortShapeDefs = [
+  {id:'star', emoji:'⭐'}, {id:'circle', emoji:'🔵'}, {id:'triangle', emoji:'🔺'}, {id:'square', emoji:'🟩'}
+];
+let sortMode = 'color'; // 'color' | 'shape'
+let sortItemsData = [];
+let selectedSortItem = null;
+
+function getSortGroups(){ return sortMode==='color' ? sortColorDefs : sortShapeDefs; }
+function renderSortPicker(){
+  const picker = document.getElementById('sortPicker');
+  picker.innerHTML = '';
+  [['color','Sort by Color 🎨'],['shape','Sort by Shape 🔷']].forEach(([mode,label])=>{
+    const b = document.createElement('button');
+    b.className = 'pill-btn ghost' + (sortMode===mode?' selected':'');
+    b.textContent = label;
+    b.onclick = ()=>{ sortMode = mode; highlightSortPicker(); newSortRound(); };
+    picker.appendChild(b);
+  });
+}
+function highlightSortPicker(){
+  document.querySelectorAll('#sortPicker .pill-btn').forEach(b=>{
+    const isColor = b.textContent.includes('Color');
+    b.classList.toggle('selected', (sortMode==='color' && isColor) || (sortMode==='shape' && !isColor));
+  });
+}
+function newSortRound(){
+  selectedSortItem = null;
+  const groups = getSortGroups();
+  let items = [];
+  groups.forEach(g=>{ items.push({groupId:g.id}); items.push({groupId:g.id}); });
+  sortItemsData = items.map((it,i)=>({id:i, groupId:it.groupId, placed:false})).sort(()=>Math.random()-0.5);
+  renderSortBins();
+  renderSortItems();
+}
+function renderSortBins(){
+  const groups = getSortGroups();
+  const wrap = document.getElementById('sortBins');
+  wrap.innerHTML = '';
+  groups.forEach(g=>{
+    const bin = document.createElement('div');
+    bin.className = 'sort-bin';
+    bin.id = 'sort-bin-'+g.id;
+    if(sortMode==='color'){
+      bin.style.background = g.soft;
+      bin.style.borderColor = g.css;
+    } else {
+      bin.textContent = g.emoji;
+    }
+    bin.onclick = ()=> attemptSortPlacement(g.id, bin);
+    wrap.appendChild(bin);
+  });
+}
+function renderSortItems(){
+  const wrap = document.getElementById('sortItems');
+  wrap.innerHTML = '';
+  const groups = getSortGroups();
+  const remaining = sortItemsData.filter(i=>!i.placed);
+  if(remaining.length===0){
+    wrap.innerHTML = '<div class="sort-complete-msg">All sorted 🌿</div>';
+    return;
+  }
+  remaining.forEach(item=>{
+    const g = groups.find(x=>x.id===item.groupId);
+    const el = document.createElement('button');
+    el.className = 'sort-item';
+    if(sortMode==='color'){ el.style.background = g.css; }
+    else { el.textContent = g.emoji; }
+    el.onclick = ()=> selectSortItem(item, el);
+    wrap.appendChild(el);
+  });
+}
+function selectSortItem(item, el){
+  if(selectedSortItem && selectedSortItem.item.id === item.id){
+    el.classList.remove('selected');
+    selectedSortItem = null;
+    clearBinAwaiting();
+    return;
+  }
+  document.querySelectorAll('.sort-item.selected').forEach(e=>e.classList.remove('selected'));
+  selectedSortItem = { item, el };
+  el.classList.add('selected');
+  markBinsAwaiting();
+}
+function markBinsAwaiting(){
+  document.querySelectorAll('.sort-bin').forEach(b=> b.classList.add('awaiting'));
+}
+function clearBinAwaiting(){
+  document.querySelectorAll('.sort-bin').forEach(b=> b.classList.remove('awaiting'));
+}
+function attemptSortPlacement(groupId, binEl){
+  if(!selectedSortItem) return;
+  if(selectedSortItem.item.groupId === groupId){
+    selectedSortItem.item.placed = true;
+    clearBinAwaiting();
+    selectedSortItem = null;
+    bumpBinCount(binEl);
+    renderSortItems();
+  } else {
+    // gentle, silent, non-punitive: a soft opacity dip, nothing more
+    binEl.classList.add('nudge');
+    setTimeout(()=> binEl.classList.remove('nudge'), 500);
+  }
+}
+function bumpBinCount(binEl){
+  const count = (parseInt(binEl.dataset.count || '0', 10)) + 1;
+  binEl.dataset.count = count;
+  let countEl = binEl.querySelector('.bin-count');
+  if(!countEl){
+    countEl = document.createElement('div');
+    countEl.className = 'bin-count';
+    binEl.appendChild(countEl);
+  }
+  countEl.textContent = count;
+}
+
+/* ============================================================
+   6. SOCIAL — turn-taking emotion match
+============================================================ */
+const emotionSetLevel1 = ['😀','😢','😡','😲','😴','🥳','😨','🙂'];
+const emotionSetLevel2 = ['😀','😢','😡','😲','😴','🥳','😨','🙂','🤔','😂'];
+function getEmotionSet(){ return currentLevel===2 ? emotionSetLevel2 : emotionSetLevel1; }
+let socialCards = [], flipped = [], matched = [], currentPlayer = 1, lock=false;
+function setupSocial(){
+  const set = getEmotionSet();
+  const pairs = [...set, ...set].sort(()=>Math.random()-0.5);
+  socialCards = pairs.map((emo,i)=>({id:i, emo, flipped:false, matched:false}));
+  flipped = []; matched = []; currentPlayer = 1; lock=false;
+  updateTurnBanner();
+  renderEmoGrid();
+}
+function updateTurnBanner(){
+  const banner = document.getElementById('turnBanner');
+  banner.textContent = `Player ${currentPlayer}'s turn`;
+  banner.className = 'turn-banner ' + (currentPlayer===1?'p1':'p2');
+}
+function renderEmoGrid(){
+  const grid = document.getElementById('emoGrid');
+  grid.innerHTML = '';
+  socialCards.forEach(card=>{
+    const el = document.createElement('button');
+    el.className = 'emo-card' + (card.flipped||card.matched?' flipped':'') + (card.matched?' matched':'');
+    el.textContent = (card.flipped||card.matched) ? card.emo : '❓';
+    el.onclick = ()=> flipCard(card.id);
+    grid.appendChild(el);
+  });
+}
+function flipCard(id){
+  if(lock) return;
+  const card = socialCards.find(c=>c.id===id);
+  if(card.flipped || card.matched) return;
+  card.flipped = true;
+  flipped.push(card);
+  renderEmoGrid();
+  if(flipped.length===2){
+    lock = true;
+    setTimeout(()=>{
+      const [a,b] = flipped;
+      if(a.emo===b.emo){
+        a.matched = true; b.matched = true;
+        addStar();
+        if(socialCards.every(c=>c.matched)) markModuleCleared('social');
+      } else {
+        a.flipped = false; b.flipped = false;
+      }
+      flipped = [];
+      lock = false;
+      currentPlayer = currentPlayer===1?2:1;
+      updateTurnBanner();
+      renderEmoGrid();
+    }, 900);
+  }
+}
+</script>
+</body>
+</html>
